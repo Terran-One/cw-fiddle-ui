@@ -1,25 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Grid } from "@mui/material";
+import "./App.css";
+import T1AppBar from "./components/common/T1AppBar";
+import T1Container from "./components/common/T1Container";
+import Layout from "./components/layout/Layout";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Grid
+      container
+      direction="column"
+      width="100vw"
+      height="100vh"
+      className="T1App-root"
+    >
+      <T1AppBar />
+      <Grid item flex={1} sx={{ display: "relative" }}>
+        <T1Container>
+          <Grid container width="100%" height="100%">
+            {/* <Routes>
+              <Route path="*" element={<VoidScreen />} />
+            </Routes> */}
+            <Layout />
+          </Grid>
+        </T1Container>
+      </Grid>
+    </Grid>
   );
 }
 
