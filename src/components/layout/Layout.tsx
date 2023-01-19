@@ -1,5 +1,6 @@
 import { Grid } from "@mui/material";
 import T1Drawer from "../common/T1Drawer";
+import { CodeEditor } from "../editor/CodeEditor";
 
 export interface ILayout {}
 
@@ -17,7 +18,7 @@ export default function Layout(props: ILayout) {
           overflow: "hidden",
         }}
       >
-        Hi
+        <CodeEditor />
       </Grid>
     </Grid>
   );
